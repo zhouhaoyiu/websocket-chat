@@ -32,6 +32,7 @@ const Ws = require('ws');
   }
 
   function handleMessage(msg) {
+    console.log(msg.toString())
     server.clients.forEach(function(c){
       c.send(msg.toString())
     })
